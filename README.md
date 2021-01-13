@@ -19,4 +19,21 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
   ![Cómo funciona Java](https://i.imgur.com/4MO24Rq.png)
 
+- ### Clase 2. Mi primer programa en Kotlin
+
+  Para empezar a trabajar con Kotlin se necesita:
+
+  - El JDK de Java
+  - IntelliJ Idea (Integra por defecto el compilador de Kotlin)
+
+  La extensión de archivo de Kotlin es ``.kt``
+
+  #### Función main en Kotlin
+
+  ````kotlin
+  fun main(args: Array<String>) {
+      println("Hello World!")
+  }
+  ````
+
   
