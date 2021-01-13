@@ -36,4 +36,34 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   }
   ````
 
+- ### Clase 3. Variables vs. Objetos
+
+  #### Variable
+
+  Espacio que se reserva en memoria para guardar un sólo dato.
+
+  #### Objetos
+
+  Son un espacio en memoria un poco más complejo, pues puede componerse de múltiples variables y/o objetos, métodos, etc.
+
+  En Kotlin todo es un objeto, se tratan de evitar los tipos de datos primitivos por lo que *no se deben declarar valores primitivos en Kotlin*. No obstante cuando no se usa un elemento como un objeto Kotlin lo toma como un primitivo, **por ejemplo:**
+
+  ````kotlin
+  var i = 10
+  i = i * 2
+  println(i)
+  ````
+
+  Kotlin utiliza *Wrappers* para los números, a esto se le conoce como **Boxing**.
+
+  #### Operadores
+
+  Dado que en Kotlin hay que procurar como buena práctica que todo sea un objeto hay una serie de métodos que cumplen la misma función que los operadores de los tipos primitivos:
+
+  ![métodos](https://i.imgur.com/VKJkrin.png)
+
+  ![métodos 2](https://i.imgur.com/xcDrb3q.png)
+
+  ![métodos 3](https://i.imgur.com/HYUswRU.png)
+
   
