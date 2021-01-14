@@ -145,7 +145,37 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
     El valor se determina en tiempo de compilación.
 
-  
+- ### Clase 7. Ejercicio var val const
+
+  #### var
+
+  No es una buena práctica usar ``var``, usarlo sólo si es estrictamente necesario y las necesidades del programa lo requieran. Si ese es el caso hay que usar este tipo de variables sólo como **locales a un método**, nunca de manera global.
+
+  ````kotlin
+  var n = 3 // Declarar una variable con var
+  ````
+
+  **🛈 Nota:** no es una buena práctica usar ``var`` en variables globales, pues esto interfiere con el concepto de *funciones puras* que son funciones que no pueden ser alteradas y además al ser de scope global y a la vez una variable cuyo valor puede ser alterado en cualquier momento se provoca que el código sea vulnerable y que el resultado de la ejecución del mismo sea arbitrario.
+
+  #### val
+
+  ````kotlin
+  val name = args[0]
+  ````
+
+  En las variables de tipo ``val`` el valor se asigna durante la ejecución del código
+
+  ``val`` es ampliamente usado en variables de scope local
+
+  #### const
+
+  No se usa para definir variables locales pues su uso más extendido es la definición de variables globales. Al ser una constante, por convención el nombre de la variable se escribe  en mayúsculas. 
+
+  ````java
+  const val N = "NAME" // const val es el equivalente a final static en Java
+  ````
 
   
+
+
 

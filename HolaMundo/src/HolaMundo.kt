@@ -1,3 +1,5 @@
+const val N = "Name"
+
 fun main(args: Array<String>) {
     println("Hola Mundo")
 
@@ -18,4 +20,20 @@ fun main(args: Array<String>) {
     println(a.minus(b))
     println(a.times(b))
     println(a.div(b))
+
+    // var
+    println("\nvar")
+    var n = 3
+    println("n = $n")
+    n = 10
+    println("n = $n")
+
+    // val
+    println("\nval")
+    val name = args[0]
+    println("name = $name")
+
+    // const
+    println("\nconst")
+    println("N = $N")
 }
