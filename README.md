@@ -175,7 +175,37 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   const val N = "NAME" // const val es el equivalente a final static en Java
   ````
 
-  
+- ### Clase 8.  Programación Funcional: Funciones Puras e Inmutabilidad
+
+  #### Programación funcional
+
+  Es un paradigma de programación, en el que se trabaja de una forma más declarativa preocupándose más por el **qué** que por el **cómo**.
+
+  En este paradigma se usan funciones todo el tiempo, en parámetros de otras funciones, asignadas a variables, etc. También tiene la peculiaridad de romper con la mayoría de los conceptos conocidos de la programación, se dejan de usar variables en favor de las **constantes** y la **inmutabilidad**, se cambian los bucles ``for``, ``while``, ``do while``, etc, por la **recursividad**. Además debido al uso extendido de las funciones estas deben ser **puras** por definición.
+
+  #### Funciones puras
+
+  Una función pura, deberá cumplir con dos cosas específicamente:
+
+  1. Dados los mismos parámetros de entrada la función debe retornar siempre el mismo valor.
+  2. La función no debe tener efectos colaterales, es decir no debe haber  nada en el entorno que la altere. Como por ejemplo, variables globales.
+
+  #### Inmutabilidad
+
+  Se fomenta el uso de **constantes** sobre las variables cuyo valor puede ser alterado.
+
+  La inmutabilidad es uno de los principios de la programación funcional  donde nos promueve la ausencia de estado mutable o también conocido como **Stateless**.
+
+  #### Estado
+
+  Es cualquier dato que se pueda guardar y modificar posteriormente en memoria
+
+  - Una variable
+  - Un archivo
+  - Un socket
+
+  Para el caso de las variables en Kotlin es una buena práctica declararlas como ``val`` en vez de ``var``.
+   Lo ideal es nunca tener variables de tipo ``var`` declaradas de manera **global** pues estas van en contra de la inmutabilidad, aunque a veces es  complicado prescindir de ellas en el resto del programa. Su mejor lugar  es cuando están declaradas de manera local al método.
 
 
 
