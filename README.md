@@ -73,11 +73,55 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 - ### Clase 4. Operadores en Kotlin
 
   ````kotlin
-  val a = 4 // Declarar una variable
+  val a = 4 // Declarar una variable. 
   a.plus(b) // Ejecutar métodos. plus() → Método para sumar
   ````
 
   Aunque aparentemente ``a`` es una variable, Kotlin internamente trata esa variable como un objeto, por eso se pueden ejecutar métodos sobre ``a``.
 
   Es recomendable usar los métodos para hacer operaciones en lugar de usar operadores, esto es porque los métodos están mejor optimizados y permiten tener manejar de forma más eficiente hilos y coroutines.
+
+- ### Clase 5.  Otros Operadores en Kotlin
+
+  #### Operadores unarios
+
+  Aplicar la ley de signos, permitiendo convertir un número positivo en negativo y viceversa.
+
+  ````kotlin
+  var a = -2
+  var b = a.unaryMinus()
+  println("b: $b")
+  
+  /* Esto imprimirá:
+  b: 2 
+  Porque (-) por (-) es (+)
+  */
+  ````
+
+  **🛈 Nota:** También se pueden crear variables usando la palabra reservada ``var``
+
+  #### Operador de negación
+
+  Funciona con datos lógicos, este simplemente negará el dato establecido.
+
+  ````kotlin
+  var a = true
+  var b = a.not()
+  println("b: $b")
+  
+  // Esto imprimirá:
+  B: FALSE
+  ````
+
+  Al utilizar datos lógicos, la función not() no será la única que se puede usar, hay otras opciones como se muestra en la figura:
+
+  ![Otros operadores lógicos en Kotlin](https://i.imgur.com/PE51l60.jpg)
+
+  #### Operador incremento y decremento
+
+  Permiten incrementar o decrementar el valor de la variable en 1. Puede aplicarse pre-incremento/decremento y post-incremento/decremento.
+
+  #### Operadores de equidad
+
+  Permiten comparar si un dato es igual, o mayor, o mayor e igual que otro, etc. su resultado será un valor lógico. Estos pueden ser utilizados en los  controladores de flujo como if, when, for, while etc.
 
