@@ -207,5 +207,55 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   Para el caso de las variables en Kotlin es una buena práctica declararlas como ``val`` en vez de ``var``.
    Lo ideal es nunca tener variables de tipo ``var`` declaradas de manera **global** pues estas van en contra de la inmutabilidad, aunque a veces es  complicado prescindir de ellas en el resto del programa. Su mejor lugar  es cuando están declaradas de manera local al método.
 
+- ### Clase 9.  Strings
+
+  Kotlin **no es estrictamente tipado**, por lo que no hay que no hay que poner explícitamente el tipo de dato, pues Kotlin puede inferirlo en base a los datos de la  variable.
+
+  ````kotlin
+  val name = "Andrés López" // Tipo de dato inferido por Kotlin
+  val apellido: String = "López" // Tipo de dato definido explícitamente → String
+  val x: Int = 4 // Tipo de dato → Int (entero)
+  
+  println("Tu nombre es $nombre") // Imprimir variable. $nombre → permite poner variables en un String. La concatenación con + también funciona en Kotlin
+  
+  ````
+
+  **🛈 Nota:** definir los tipos de datos es una buena práctica en la programación funcional.
+
+  #### Párrafos
+
+  En Kotlin se pueden usar los **raw strings** para crear párrafos, su sintaxis es la siguiente:
+
+  ````kotlin
+  val paragraph = """
+  	Texto
+  	Un poco más de texto
+  	Aún más texto :v
+  """.trimIndent()
+  // .trimIndent() → Se usa para que se respete la indentación y los saltos de línea en el texto
+  ````
+
+  Limpiar el texto
+
+  ````kotlin
+  val paragraph = """
+  	** Texto
+  	** Un poco más de texto
+  	** Aún más texto :v
+  """.trimIndent()
+  
+  println(paragraph.trimMargin("** ")) // Quita el patrón al inicio de cada línea
+  ````
+
+  #### Caracteres especiales
+
+  - **\t :** Tabular
+  -  **\b :** Retrocede el cursor de texto 1 carácter
+  - **\n :** Crea un salto de línea
+  - **\r :** Mueve el cursor de texto al inicio de la línea en la que está
+  - **\’, ", \ y $ :** Permite usar los caracteres que hay luego del \ dentro de las comillas sin conflictos
+
+  
+
 
 
