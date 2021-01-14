@@ -255,6 +255,29 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   - **\r :** Mueve el cursor de texto al inicio de la línea en la que está
   - **\’, ", \ y $ :** Permite usar los caracteres que hay luego del \ dentro de las comillas sin conflictos
 
+- ### Clase 10. Conversión de tipos de datos
+
+  En Kotlin asignar un tipo de dato menor a uno mayor produce un error. Para evitar esto hay que usar una serie de métodos que Kotlin proporciona para las conversiones entre tipos de datos:
+
+  - **toByte()**
+  - **toShort()**
+  - **toInt()**
+  - **toLong()**
+  - **toFloat()**
+  - **toDouble()**
+  - **toChar()**
+
+  **Ejemplo:**
+
+  ````kotlin
+  var a: Int = 5
+  var b: Long = a.toLong() // Convertir de Int a Long
+  ````
+
+  Las posibles conversiones que se pueden hacer en Kotlin son las siguientes:
+
+  ![Conversiones de tipos de datos posibles en Kotlin](https://i.imgur.com/7vK6V5f.jpg)
+
   
 
 
