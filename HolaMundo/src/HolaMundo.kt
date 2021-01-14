@@ -71,5 +71,25 @@ fun main(args: Array<String>) {
     }
      */
 
+    // If
+    println("\nIf")
+    val number = 2
+    if (number != 2) {
+        println("number es diferente de 2")
+    }
 
+    if (number.equals(2)) {
+        println("number es igual a 2")
+    } else {
+        println("No, no son iguales")
+    }
+
+    // When
+    println("\nWhen")
+    when(number) {
+        in 1..5 -> println("Si esta entre 1 y 5")
+        in 1..3 -> println("Si esta entre 1 y 3")
+        !in 5..10 -> println("No esta entre 5 y 10")
+        else -> println("No esta en ninguno de los anteriores")
+    }
 }

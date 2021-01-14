@@ -298,6 +298,80 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
   Los rangos son muy útiles para crear listados, numeraciones, índices, etc.
 
+- ### Clase 12. If y when en Kotlin
+
+  #### If
+
+  ````kotlin
+  val number = 2
+  if (number != 2) {
+      println("number es diferente de 2")
+  }
+  
+  // Si se trata a la variable como un objeto
+  if (number.equals(2)) {
+      println("number es igual a 2")
+  }
+  ````
+
+  #### When
+
+  Es similar a ``switch`` en otros lenguajes de programación. Se suele usar mucho en rangos.
+
+  ````kotlin
+  when(number) {
+      in 1..5 -> println("Si esta entre 1 y 5") // Evalua si el valor de un avariable esta dentro de un rango
+      in 1..3 -> println("Si esta entre 1 y 3")
+      !in 5..10 -> println("No esta entre 5 y 10") // ! → Niega este caso
+      else -> println("No esta en ninguno de los anteriores") // Es el equivalente al default en otros lenguajes
+  }
+  ````
+
+  **🛈 Nota:** al usar ``when`` a diferencia de ``switch`` cuando se cumple un cosa se deja de evaluar los demás, como si en cada caso de definiera un break para romper el flujo del programa.
+
+  Hay que tener en cuanta que si bien ``when`` se usa mucho en rangos, este [no es su único uso posible](https://kotlinlang.org/docs/reference/basic-syntax.html#using-when-expression). **Ejemplo:**
+
+  ````kotlin
+  fun describe(obj: Any): String =
+      when (obj) {
+          1          -> "One"
+          "Hello"    -> "Greeting"
+          is Long    -> "Long"
+          !is String -> "Not a string"
+          else       -> "Unknown"
+      }
+  ````
+
+  Además ``when`` puede evaluar varias condiciones simultáneamente
+
+  ````kotlin
+  when (x) {
+      0, 1 -> print("x == 0 or x == 1")
+      else -> print("otherwise")
+  }
+  ````
+
+   Es posible usar ``when`` **como un reemplazo de una sentencia if-else if**
+
+
+  ```kotlin
+  when {
+      x.isOdd() -> print("x is odd")
+      y.isEven() -> print("y is even")
+      else -> print("x+y is odd.")
+  }
+  ```
+  Y también para **validar peticiones HTTP**
+  _Esto es partir de Kotlin v1.3_
+
+  ```kotlin
+  fun Request.getBody() =
+  	when (val response = executeRequest()) {
+          is Success -> response.body
+          is HttpError -> throw HttpException(response.status)
+  	}
+  ```
+
 
 
 
