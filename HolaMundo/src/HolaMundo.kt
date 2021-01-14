@@ -51,4 +51,25 @@ fun main(args: Array<String>) {
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     """.trimIndent()
     println("paragraph = $paragraph")
+
+    // Rangos
+    println("\n Rangos")
+    val oneToHundred: IntRange = 1..10
+    for (i in oneToHundred) {
+        println(i)
+    }
+
+    val aToZ: CharRange = 'A'..'Z'
+    for (letter in aToZ) {
+        println(letter)
+    }
+
+    /*
+    Otra forma de imprimir el rango anterior
+    for (letter in 'A'..'Z') {
+        println(letter)
+    }
+     */
+
+
 }

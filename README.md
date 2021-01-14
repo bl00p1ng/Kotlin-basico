@@ -278,7 +278,27 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
   ![Conversiones de tipos de datos posibles en Kotlin](https://i.imgur.com/7vK6V5f.jpg)
 
+- ### Clase 11. Rangos
+
+  Es un operador que permite imprimir una secuencia de caracteres en una sintaxis muy simple.
+
+  ````kotlin
+  // Imprimir los números del 1 al 100
+  val oneToHundred: IntRange = 1..100
+  for (i in oneToHundred) {
+      println(i)
+  }
   
+  // Imprimir letras de la A a la Z
+  val aToZ: CharRange = 'A'..'Z'
+  for (letter in aToZ) {
+      println(letter)
+  }
+  ````
+
+  Los rangos son muy útiles para crear listados, numeraciones, índices, etc.
+
+
 
 
 
