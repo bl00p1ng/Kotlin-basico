@@ -36,6 +36,9 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   }
   ````
 
+
+## 📚 Módulo 2. Conceptos básicos
+
 - ### Clase 3. Variables vs. Objetos
 
   #### Variable
@@ -66,4 +69,15 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
   ![métodos 3](https://i.imgur.com/HYUswRU.png)
 
-  
+
+- ### Clase 4. Operadores en Kotlin
+
+  ````kotlin
+  val a = 4 // Declarar una variable
+  a.plus(b) // Ejecutar métodos. plus() → Método para sumar
+  ````
+
+  Aunque aparentemente ``a`` es una variable, Kotlin internamente trata esa variable como un objeto, por eso se pueden ejecutar métodos sobre ``a``.
+
+  Es recomendable usar los métodos para hacer operaciones en lugar de usar operadores, esto es porque los métodos están mejor optimizados y permiten tener manejar de forma más eficiente hilos y coroutines.
+
