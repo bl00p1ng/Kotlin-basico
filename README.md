@@ -125,3 +125,27 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
   Permiten comparar si un dato es igual, o mayor, o mayor e igual que otro, etc. su resultado será un valor lógico. Estos pueden ser utilizados en los  controladores de flujo como if, when, for, while etc.
 
+- ### Clase  6. Tipos de variables: var, val y const
+
+  Hay 2 Tipos de variables en Kotlin: *changeales*(que se valor puede cambiar) y *unchangeables*(su valor no puede cambiar).
+
+  ##### Changeables
+
+  - ##### var
+
+  #### Unchangeables
+
+  En el caso de Kotlin es recomendable usar más este tipo de variables. Esto se debe a que Kotlin obedece mucho a los principios de la programación funcional, y uno de esos principios es la inmutabilidad.
+
+  - ##### val
+
+    El valor se puede determinar en tiempo de ejecución.
+
+  - ##### const
+
+    El valor se determina en tiempo de compilación.
+
+  
+
+  
+
