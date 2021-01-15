@@ -629,5 +629,38 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   numbers.size
   ````
 
+- ### Clase 21. Métodos útiles en arreglos
+
+  #### Diferencias entre las formas de declarar Arrays
+
+  Esta forma de declarar Arrays se usa para almacenar objetos:
+
+  ````kotlin
+  val foo = arrayOf<String>(...)
+  ````
+
+  Por el contrario esta otra forma se usa para almacenar tipos de datos primitivos:
+
+  ````kotlin
+  val bar = intArrayOf(...)
+  ````
+
+  #### Convertir un Array de objetos en un Array de tipos primitivos
+
+  ````kotlin
+  var arrayObject = arrayOf(5, 6, 7, 8)
+  var intPrimitive: IntArray = arrayObject.toIntArray() // Convertir a Array de primitivos
+  ````
+
+  #### Métodos de Arrays
+
+  ````kotlin
+  val suma = arrayObject.sum() // sum() → Suma los elementos de un Array
+  arrayObject = arrayObject.plus(4) // plus() → Añadir un elemento al Array
+  arrayObject = arrayObject.reversedArray() // reversedArray() → Invertir un Array
+  arrayObject.reverse() // Lo mismo que el anterior pero sin asignar el array modificado a una variable
+  
+  ````
+
   
 

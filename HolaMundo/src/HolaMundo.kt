@@ -156,4 +156,24 @@ fun main(args: Array<String>) {
 
     var average = sum / numbers.size
     println("average = $average")
+
+    // Convertir un Array de objetos en un Array de tipos primitivos
+    println("Conversión de Arrays")
+    var arrayObject = arrayOf(5, 6, 7, 8)
+    var intPrimitive: IntArray = arrayObject.toIntArray()
+
+    // Métodos de Arrays
+    println("\nMétodos de Arrays")
+    val suma = arrayObject.sum()
+    println("La suma de Array es $suma")
+
+    arrayObject = arrayObject.plus(4)
+    for (element in arrayObject) {
+        println(element)
+    }
+
+    arrayObject = arrayObject.reversedArray()
+    for (element in arrayObject) {
+        println(element)
+    }
 }
