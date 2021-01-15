@@ -599,6 +599,35 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   println(listWithoutNull)
   ````
 
+- ### Clase 20. ¿Qué es un Array en Kotlin?
+
+  #### Arrays
+
+  Son colecciones de datos que permiten múltiples datos.
+
+  ##### Declarar Arrays
+
+  ````kotlin
+  val countries = arrayOf("India", "México", "Colombia", "Argentina", "Chile", "Perú") // Crea un array cuyo tipo de dato será inferido
   
+  val days = arrayOf<String>("Lunes", "Martes", "Miércoles", "Jueves", "Sábado", "Domingo") // Crea un array de un tipo de dato especifico.
+  
+  val numbers = intArrayOf(1, 2, 3, 4, 5) // Crea un Array de enteros
+  ````
+
+  ##### Recorrer Arrays
+
+  ````kotlin
+  for (num in numbers) {
+      println("Numbers: $num")
+  }
+  ````
+
+  ##### Conocer longitud de un Array
+
+  ````kotlin
+  numbers.size
+  ````
 
   
+

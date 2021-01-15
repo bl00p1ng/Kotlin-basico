@@ -137,4 +137,23 @@ fun main(args: Array<String>) {
 
     val listWithoutNull: List<Int> = listWithNulls.filterNotNull()
     println(listWithoutNull)
+
+    // Arrays
+    println("\nArrays")
+    val countries = arrayOf("India", "México", "Colombia", "Argentina", "Chile", "Perú", 5, 6)
+    val days = arrayOf<String>("Lunes", "Martes", "Miércoles", "Jueves", "Sábado", "Domingo")
+    val numbers = intArrayOf(6, 6, 23, 9, 2, 3, 2)
+
+    for (num in numbers) {
+        println("Numbers: $num")
+    }
+
+    // Promedio de los números dados
+    var sum = 0
+    for (num in numbers) {
+        sum += num
+    }
+
+    var average = sum / numbers.size
+    println("average = $average")
 }
