@@ -372,6 +372,30 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   	}
   ```
 
+- ### Clase 13. Bucles while y  do while
+
+  #### While
+  
+  ````kotlin
+  var i = 1
+  while (i <= 10) {
+      println("i = $i")
+      i++
+  }
+  ````
+  
+  #### Do While
+  
+  ````kotlin
+  i = 1
+  do {
+      println("i = $i")
+      i++
+  } while (i <= 10)
+  ````
+  
+  
+
 
 
 

@@ -92,4 +92,20 @@ fun main(args: Array<String>) {
         !in 5..10 -> println("No esta entre 5 y 10")
         else -> println("No esta en ninguno de los anteriores")
     }
+
+    // While
+    println("\nWhile")
+    var i = 1
+    while (i <= 10) {
+        println("i = $i")
+        i++
+    }
+
+    // Do While
+    println("\nDo While")
+    i = 1
+    do {
+        println("i = $i")
+        i++
+    } while (i <= 10)
 }
