@@ -556,4 +556,49 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   it.listFiles()?.size ?: 0
   ````
 
+- ### Clase 18. Ejercicios con Null safety y operador Elvis
+
+  #### Doubel bang
+
+  ````kotlin
+  // Siempre que se use !! se DEBE manejat la excepción con un try/cath
+  try {
+      var compute: String?
+      compute = null
+      var longitud: Int = compute!!.length
+  } catch (e: NullPointerException) {
+      println("Ingresa un valor, no aceptamos nulos")
+  }
+  ````
+
+  #### Llamada segura
+
+  Evitar que salte una excepción
+
+  ````kotlin
+  val compute: String? = null
+  val longitud: Int? = compute?.length
+  println("longitud = $longitud")
+  ````
+
+  #### Operador Elvis
+
+  ````kotlin
+  val teclado: String? = null
+  val longitudTeclado: Int = teclado?.length ?: 0
+  println("Longitud teclado; $longitudTeclado")
+  ````
+
+  #### Filtrar Nulls en un List
+
+  ````kotlin
+  val listWithNulls: List<Int?> = listOf<Int?>(7, null, null, 4)
+  println("Lista con null: $listWithNulls")
+  
+  val listWithoutNull: List<Int> = listWithNulls.filterNotNull() // filterNotNull() → Elimina los valores null de una lista 
+  println(listWithoutNull)
+  ````
+
+  
+
   
