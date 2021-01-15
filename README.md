@@ -512,4 +512,29 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
     }
     ````
 
-    
+- ### Clase 16. Valores Nulos y Double Bang
+
+  La *"nada"* es un concepto ligado al lenguaje natural, en  el caso de Kotlin lo más cercano para representar nada es un valor *nulo*.
+
+  **🛈 Nota:** es una práctica inicializar las variables y no dejarlas como valores nulos.
+
+  Kotlin es **Null Safety** lo que significa que previene las indeterminaciones que causan los ``NullPointerExeptions``. Por defecto **ningún valor puede ser nulo** pues esto marcará un error. Kotlin evita que una excepción sea lanzada pues esto provoca vulnerabilidades.
+
+  No obstante habrá ocasiones en las que se necesite forzosamente trabajar con valores nulos. En ese caso Kotlin ofrece una sintaxis especial para ello.
+
+  ````kotlin
+  val foo: Int? // ? → Permite que la variaable sea Null Saftly, es decir que no se lance una excepción por ser un valor nulo 
+  foo?.metodo()
+  ````
+
+  ####  Double bang
+
+  Es un operador que permite manejar una excepción. Si por ejemplo se tiene un valor nulo este operador va a forzar que se lance la excepción.
+
+  ````kotlin
+  var msg: String?
+  msg = null
+  println(msg!!.length) // !! → Operador Double bang
+  ````
+
+  **🛈 Nota:** el operador *double bang* se rara vez en el flujo de desarrollo profesional con Kotlin. **No se recomienda usarlo**, pues esto se considera una mala práctica.
