@@ -434,3 +434,9 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
   **🛈 Nota:** un ciclo ``for`` es 10x más rápido que uno ``foreach``.
 
+  #### Conclusiones de rendimiento
+
+  - **Si es para un rango es mejor usar For**
+  - **Si es para una colección (sequence, list, set) es mejor foreach**
+  - **Si se va a usar break y continue es mejor For**
+
