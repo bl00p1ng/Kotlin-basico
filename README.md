@@ -440,3 +440,76 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   - **Si es para una colección (sequence, list, set) es mejor foreach**
   - **Si se va a usar break y continue es mejor For**
 
+- ### Clase 15. Break, Continue y Labels
+
+  #### break
+
+  Permite interrumpir el código cuando se cumpla una condición.
+
+  **Ejemplo:**
+
+  ````kotlin
+  for (i in 1..3) {
+          println("\ni: $i ")
+          for (j in 1..5) {
+              if (j.equals(3)) break // Termina el ciclo más cercano
+              println("j: $j")
+          }
+  }
+  ````
+
+  #### continue
+
+  Permite  omitir iteraciones de un ciclo cuando se cumpla una condición
+
+  ````kotlin
+  for (i in 1..3) {
+          println("\ni: $i ")
+          for (j in 1..5) {
+              if (j.equals(3)) continue // Va a la siguiente línea de código del ciclo más cercano.
+              println("j: $j")
+          }
+  }
+  ````
+
+  #### Labels
+
+  Sirven para controlar mejor los saltos y **definir en qué ciclo queremos que inicie después de saltar.** Permiten "etiquetar" por así decirlo el ciclo especifico al que se quiere aplicar ``break`` o ``continue``. Son particularmente útiles cuando se tienen ciclos anidados.
+
+  La sintaxis para **crear** un label es: ``nombre@``
+
+  La sintaxis para **llamar** a un label es: ``break/continue@nombre``
+
+  **Ejemplos:**
+
+  - ##### break y label
+
+    ````kotlin
+    terminarTodoCiclo@ for (i in 1..3) {
+        println("\ni: $i ")
+        for (j in 1..3) {
+            println("\nj: $j")
+            for (k in 1..5) {
+                if (k.equals(3)) break@terminarTodoCiclo
+                println("k: $k")
+            }
+        }
+    }
+    ````
+
+  - ##### break y continue
+
+    ````kotlin
+    escaparJ@ for (i in 1..3) {
+        println("\ni: $i ")
+        for (j in 1..3) {
+            println("\nj: $j")
+            for (k in 1..5) {
+                if (k.equals(3)) continue@escaparJ
+                println("k: $k")
+            }
+        }
+    }
+    ````
+
+    
