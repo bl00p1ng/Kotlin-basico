@@ -394,9 +394,43 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   } while (i <= 10)
   ````
   
-  
+- ### Clase 14. Ciclos for y foreach en Kotlin
 
+  #### For
 
+  ````kotlin
+  val daysOfWeek = listOf("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado")
+  for(day in daysOfWeek){
+          println(day)
+  }
+  ````
 
+  Si se quiere tener acceso al índice de cada elemento del Array la sintaxis es la siguiente:
 
+  ````kotlin
+  for((index,day) in daysOfWeek.withIndex()){
+          println("$index :$day")
+  }
+  ````
+
+  #### Foreach
+
+  También permite recorrer una lista con múltiples elementos pero usando una sintaxis más simple:
+
+  ````kotlin
+  val daysOfWeek = listOf("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado")
+  daysOfWeek.forEach{
+          println(it)
+  }
+  ````
+
+  `it` será el iterador que contiene cada elemento de la lista mientras es recorrida.
+
+  También se puede usar ``forEachIndexed`` para obtener acceso a los índices:
+
+  ````kotlin
+  daysOfWeek.forEachIndexed { index, s -> println(“Index $index: $s”) }
+  ````
+
+  **🛈 Nota:** un ciclo ``for`` es 10x más rápido que uno ``foreach``.
 
