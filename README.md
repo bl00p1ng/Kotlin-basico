@@ -538,3 +538,22 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   ````
 
   **🛈 Nota:** el operador *double bang* se rara vez en el flujo de desarrollo profesional con Kotlin. **No se recomienda usarlo**, pues esto se considera una mala práctica.
+
+- ### Clase 17. Operador Elvis
+
+  Una de las comparaciones más comunes en la programación es la siguiente:
+
+  ````kotlin
+  if (list != null) return list.size
+  else return 0
+  ````
+
+  Lo anterior es una evaluación en la que si un elemento no es ``null`` se retorna alguna operación sobre dicho elemento, de lo contrario se retorna 0.
+
+  Usando el operador Elvis(``?:``) la sintaxis de la anterior se resumiría así:
+
+  ````kotlin
+  it.listFiles()?.size ?: 0
+  ````
+
+  
