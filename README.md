@@ -672,7 +672,7 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   
   Se componen de variables y operadores que devuelven un valor.
   
-  ````java
+  ````kotlin
   // ${} → poner expresiones
   println("x es igual a 5? ${x == 5}")
   
@@ -681,8 +681,44 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   ````
   
   Hay algunas funciones del lenguaje que so pueden ser una expresión como por ejemplo los bucles ``for`` y ``while``. De ahí en adelante todo en Kotlin puede ser una expresión (condicionales, funciones,  operaciones matemáticas, etc). 
+
+- ### Clase 23. Funciones en Kotlin
+
+  En Kotlin existen dos tipos de funciones:
+
+  - Funciones provistas con Kotlin
+  - Funciones declaradas por el desarrollador.
+
+  En Kotlin una función **siempre** va a devolver un **valor**
+
+  **🛈 Nota:** se pueden usar funciones escritas en Java dentro de Kotlin
+
+  #### Declarar funciones en Kotlin
+
+  ````kotlin
+  fun averageNumbers(numbers: IntArray): Int {
+      var sum = 0
+      for (num in numbers) {
+          sum += num
+      }
   
+      return sum / numbers.size
+  }
+  ````
+
+   **🛈 Nota:** En Kotlin **Unit** es la forma de decir que una función no retorna nada. En caso de que una función si retorne algo es necesario poner el tipo de dato que se va a retornar.
+
+  #### Llamar funciones
+
+  ````kotlin
+  averageNumbers(numbers)
+  ````
+
   
+
   
-  
+
+
+
+
 

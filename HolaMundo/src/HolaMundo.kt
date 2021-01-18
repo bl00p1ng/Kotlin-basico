@@ -142,20 +142,6 @@ fun main(args: Array<String>) {
     println("\nArrays")
     val countries = arrayOf("India", "México", "Colombia", "Argentina", "Chile", "Perú", 5, 6)
     val days = arrayOf<String>("Lunes", "Martes", "Miércoles", "Jueves", "Sábado", "Domingo")
-    val numbers = intArrayOf(6, 6, 23, 9, 2, 3, 2)
-
-    for (num in numbers) {
-        println("Numbers: $num")
-    }
-
-    // Promedio de los números dados
-    var sum = 0
-    for (num in numbers) {
-        sum += num
-    }
-
-    var average = sum / numbers.size
-    println("average = $average")
 
     // Convertir un Array de objetos en un Array de tipos primitivos
     println("Conversión de Arrays")
@@ -178,10 +164,28 @@ fun main(args: Array<String>) {
     }
 
     // Expresiones
+    println("Expresiones")
     var x = 5;
     println("x es igual a 5? ${x == 5}")
 
     val msg = "El valor de x es $x"
     x++
     println("${msg.replace("es", "fue")}, x es igual a $x")
+
+    // Funciones
+    println("Funciones")
+    println("Raíz cuadrada de: ${Math.sqrt(4.0)}")
+
+    // Promedio números
+    val numbers = intArrayOf(6, 6, 23, 9, 2, 3, 2)
+    println("El promedio de los números es: ${averageNumbers(numbers)}")
+}
+
+fun averageNumbers(numbers: IntArray): Int {
+    var sum = 0
+    for (num in numbers) {
+        sum += num
+    }
+
+    return sum / numbers.size
 }
