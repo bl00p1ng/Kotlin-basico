@@ -662,5 +662,27 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   
   ````
 
+- ### Clase 22. Expresiones vs. Valores
+
+  En Kotlin **todo** es una **expresión**.
+  
+  En Kotlin **siempre** se devuelve un valor y eso incluye a las expresiones.
+  
+  #### Expresiones
+  
+  Se componen de variables y operadores que devuelven un valor.
+  
+  ````java
+  // ${} → poner expresiones
+  println("x es igual a 5? ${x == 5}")
+  
+  // $ → poner valores
+  val msg = "El valor de x es $x"
+  ````
+  
+  Hay algunas funciones del lenguaje que so pueden ser una expresión como por ejemplo los bucles ``for`` y ``while``. De ahí en adelante todo en Kotlin puede ser una expresión (condicionales, funciones,  operaciones matemáticas, etc). 
+  
+  
+  
   
 
