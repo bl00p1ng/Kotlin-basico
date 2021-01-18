@@ -176,4 +176,12 @@ fun main(args: Array<String>) {
     for (element in arrayObject) {
         println(element)
     }
+
+    // Expresiones
+    var x = 5;
+    println("x es igual a 5? ${x == 5}")
+
+    val msg = "El valor de x es $x"
+    x++
+    println("${msg.replace("es", "fue")}, x es igual a $x")
 }
