@@ -728,9 +728,33 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   evaluate('+') // Reemplaza uno de los Named arguments por '+'
   ````
 
+- ### Clase 25. Lambdas en Kotlin
+
+  Lambdas permite tener una nueva forma de escribir funciones. En otros lenguajes  a las lambdas se les conoce como *funciones anónimas*, *functions literals* o *funciones literales*. Las Lambdas son en esencia funciones que no tienen nombre.
+
+  ````kotlin
+  {println("Hola mundo")}() // Las sentencias de la función se ponen dentro de {...}. Luego se ponen ()
   
+  // Por lo general las Lambdas se guardan dentro de una variable
+  var hola = {println("Hola mundo")}()
+  
+  // La función se llamaría así
+  hola()
+  ````
 
+  Hay otro tipo de sintaxis que se puede usar para crear funciones Lambdas
 
+  ````kotlin
+  val w = {d: Int, c: Int -> d+c} // -> separa los parámetros de las acciones de la Lambda. Al lado izquierdo se ponen los parámetros y a la derecha las acciones
+  
+  // Llamar a la función Lambdas
+  println(w(2,3))
+  
+  // Aquí se define al función lambda, los parámetros que va recibir y se pasan dichos parámetros (4, 4) en una sóla línea 
+  println({d: Int, c: Int -> d + c}(4, 4))
+  ````
+
+  
 
 
 
