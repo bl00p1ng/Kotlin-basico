@@ -144,7 +144,7 @@ fun main(args: Array<String>) {
     val days = arrayOf<String>("Lunes", "Martes", "Miércoles", "Jueves", "Sábado", "Domingo")
 
     // Convertir un Array de objetos en un Array de tipos primitivos
-    println("Conversión de Arrays")
+    println("\nConversión de Arrays")
     var arrayObject = arrayOf(5, 6, 7, 8)
     var intPrimitive: IntArray = arrayObject.toIntArray()
 
@@ -164,7 +164,7 @@ fun main(args: Array<String>) {
     }
 
     // Expresiones
-    println("Expresiones")
+    println("\nExpresiones")
     var x = 5;
     println("x es igual a 5? ${x == 5}")
 
@@ -173,7 +173,7 @@ fun main(args: Array<String>) {
     println("${msg.replace("es", "fue")}, x es igual a $x")
 
     // Funciones
-    println("Funciones")
+    println("\nFunciones")
     println("Raíz cuadrada de: ${Math.sqrt(4.0)}")
 
     // Promedio números
@@ -181,6 +181,28 @@ fun main(args: Array<String>) {
     println("El promedio de los números es: ${averageNumbers(numbers)}")
 
     println("${evaluate(number = 8)}")
+
+    // Lambdas
+    println("\nLambdas")
+    val saludo = { println("Hola mundo") }
+    saludo()
+
+    val plus = {a: Int, b: Int, c: Int -> a + b + c}
+    val result = plus(3, 4, 5)
+    println("result = $result")
+
+    // Otra forma de crear funciones Lambda
+    println({ a: Int, b: Int, c: Int -> a + b + c }(1, 2, 3))
+
+    val calculateNumber = {n: Int ->
+        when(n) {
+            in 1..3 -> println("El número esta entre 1 y 3")
+            in 4..7 -> println("El número esta entre 4 y 7")
+            in 8..10 -> println("El número esta entre 8 y 10")
+        }
+    }
+
+    calculateNumber(6)
 }
 
 fun evaluate(character: Char = '=', number: Int  = 2): String {
