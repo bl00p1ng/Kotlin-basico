@@ -25,6 +25,7 @@ fun main(args: Array<String>) {
     showMenu()
 
     // Hacer una receta
+    var ingredientesSeleccionados = arrayOf<String?>()
     if (response == "1") {
 
         do {
@@ -37,12 +38,30 @@ fun main(args: Array<String>) {
                 5 → Frutas
                 6 → Cereal
                 7 → Huevos
-                9 → Aceite
+                8 → Aceite
                 
                 🛈 Escribe "confirmar" sin las comillas cuando termines de elegir los ingredientes                 
             """.trimIndent())
-            response = readLine()
 
-        } while (!(response.equals("confirmar", true)))
+            val eleccionUsuario = readLine()
+
+            // Evaluar los ingredientes que ingreso el usuario e ingresarla en un Array
+            when(eleccionUsuario) {
+                "1" -> ingredientesSeleccionados = ingredientesSeleccionados.plus("Agua")
+                "2" -> ingredientesSeleccionados = ingredientesSeleccionados.plus("Leche")
+                "3" -> ingredientesSeleccionados = ingredientesSeleccionados.plus("Carne")
+                "4" -> ingredientesSeleccionados = ingredientesSeleccionados.plus("Verduras")
+                "5" -> ingredientesSeleccionados = ingredientesSeleccionados.plus("Frutas")
+                "6" -> ingredientesSeleccionados = ingredientesSeleccionados.plus("Cereal")
+                "7" -> ingredientesSeleccionados = ingredientesSeleccionados.plus("Huevos")
+                "8" -> ingredientesSeleccionados = ingredientesSeleccionados.plus("Aceite")
+            }
+        } while (!(eleccionUsuario.equals("confirmar", true)))
+
+        // Mostar ingredientes que ingreso el usuario
+        println("Elegiste los siguientes ingredientes:")
+        for (ingrediente in ingredientesSeleccionados) {
+            println("- $ingrediente")
+        }
     }
 }
