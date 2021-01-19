@@ -714,7 +714,19 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   averageNumbers(numbers)
   ````
 
+- ### Clase 24. Funciones con parámetros por defecto
+
+  Kotlin permite definir valores por defecto en las funciones (Named arguments). Estos valores se usarán en caso de que se pase ningún parámetro a la función.
+
+  ````kotlin
+  // character: Char = '=', number: Int  = 2 → Son los Named arguments
+  fun evaluate(character: Char = '=', number: Int  = 2): String {
+      return "$number es $character"
+  }
   
+  evaluate() // Al no pasarse ningún parámetro se usarán los Named arguments definidos en la declaración de la función
+  evaluate('+') // Reemplaza uno de los Named arguments por '+'
+  ````
 
   
 

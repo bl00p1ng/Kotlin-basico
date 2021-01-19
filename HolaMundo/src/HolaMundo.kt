@@ -179,6 +179,12 @@ fun main(args: Array<String>) {
     // Promedio números
     val numbers = intArrayOf(6, 6, 23, 9, 2, 3, 2)
     println("El promedio de los números es: ${averageNumbers(numbers)}")
+
+    println("${evaluate(number = 8)}")
+}
+
+fun evaluate(character: Char = '=', number: Int  = 2): String {
+    return "$number es $character"
 }
 
 fun averageNumbers(numbers: IntArray): Int {
