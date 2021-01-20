@@ -754,9 +754,12 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   println({d: Int, c: Int -> d + c}(4, 4))
   ````
 
-  
 
-  
+## 📚 Módulo 4. Programación Orientada a Objetos
+
+- ### Clase  28. Clases
+
+  En Kotlin las Clases se definen con la palabra reservada ``class``.
 
 
 
