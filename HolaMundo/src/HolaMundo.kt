@@ -210,7 +210,7 @@ fun main(args: Array<String>) {
     println("\nClases")
     val camera = Camera()
     camera.turnOn()
-    println("La cámara esta: ${ camera.isOn }")
+    println(camera.cameraStatus())
 }
 
 fun evaluate(character: Char = '=', number: Int  = 2): String {

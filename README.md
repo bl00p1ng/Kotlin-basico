@@ -778,5 +778,24 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
   **🛈 Nota:** ningún atributo debería poder ser modificado directamente fuera de la Clase, esto es una mala práctica
 
+- ### Clase 30. Modificadores de acceso
 
+  En kotlin todos los atributos son **públicos** por defecto.
+
+  #### Modificadores de acceso en Kotlin
+
+  - **public:** todos tienen acceso.
+  - **private:** acceso sólo dentro de la Clase
+  - **protected:** acceso sólo dentro de la Clase y las Clases que hereden
+  - **internal:** acceso entre módulos
+
+  #### Usar modificadores de acceso
+
+  ````kotlin
+  private var size
+  ````
+
+  
+
+  
 
