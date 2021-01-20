@@ -799,7 +799,7 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
   Koltlin tiene dos tipos de getters y setters:
 
-  - **Provistos por el programador:** son métodos que son creados por el programador para acceder y/o modificar un atributo. **Ejemplo:**
+  - **Provistos por el programador:** son métodos que son creados por el programador para acceder y/o modificar un atributo. Se usan cuando los elementos están encapsulados. **Ejemplo:**
 
     ````kotlin
     fun getCameraStatus(): String {
@@ -807,6 +807,24 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
     }
     ````
 
-  - **Acceso directo desde Kotlin**
+  - **Acceso directo desde Kotlin:** se usan cuando los elementos no están encapsulados. Permiten definir validaciones a la asignación de los atributos para que los datos sean lo más íntegros posible a la lógica de negocio de la aplicación.
 
   **🛈 Nota:** algunos *getters* y *setters* podrían no existir dependiendo de los métodos que ya estén definidos dentro de la Clase.
+
+  - ### Clase 32. El Get() y Set() propio de Kotlin
+
+    **field:** es un tipo de  variable que toma temporalmente el atributo al que se esta haciendo un ``set()`` para que dicho atributo pueda ser alterado.
+
+    #### Sintaxis de un set()
+
+    ````kotlin
+    var size: Int = 34
+        set(value) {
+            if (value >= 34)
+                field = value
+            else
+                field = 34
+        }
+    ````
+
+    **🛈 Nota:** este tipo de sintaxis se usan mucho Clases para datos, cómo por ejemplo Clases que alberguen datos traídos de una API (*Data Class*. - Clases de Datos) para así efectuar una serie de validaciones para verificar que los datos estén íntegros.

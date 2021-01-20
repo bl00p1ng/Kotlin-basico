@@ -1,4 +1,5 @@
 import model.Camera
+import model.Shoe
 
 const val N = "Name"
 
@@ -216,6 +217,15 @@ fun main(args: Array<String>) {
     println("\nGetters y Setters")
     camera.setResolution(1080)
     println("Resolution: ${camera.getResolution()}")
+
+    // Getters y Setters propios de Kotlin
+    println("\nGetters y Setters propios de Kotlin")
+    val shoe = Shoe()
+    shoe.size = 33
+    println(shoe.size)
+
+    shoe.model = "Tennis"
+    println(shoe.model)
 }
 
 fun evaluate(character: Char = '=', number: Int  = 2): String {
