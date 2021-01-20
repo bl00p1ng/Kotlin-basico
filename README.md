@@ -795,7 +795,18 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   private var size
   ````
 
-  
+- ### Clase 31. Getters y Setters
 
-  
+  Koltlin tiene dos tipos de getters y setters:
 
+  - **Provistos por el programador:** son métodos que son creados por el programador para acceder y/o modificar un atributo. **Ejemplo:**
+
+    ````kotlin
+    fun getCameraStatus(): String {
+        return if (isOn) "Camera is Turned" else "Camera is not turned"
+    }
+    ````
+
+  - **Acceso directo desde Kotlin**
+
+  **🛈 Nota:** algunos *getters* y *setters* podrían no existir dependiendo de los métodos que ya estén definidos dentro de la Clase.

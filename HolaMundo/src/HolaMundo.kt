@@ -210,7 +210,12 @@ fun main(args: Array<String>) {
     println("\nClases")
     val camera = Camera()
     camera.turnOn()
-    println(camera.cameraStatus())
+    println(camera.getCameraStatus())
+
+    // Getters y Setters
+    println("\nGetters y Setters")
+    camera.setResolution(1080)
+    println("Resolution: ${camera.getResolution()}")
 }
 
 fun evaluate(character: Char = '=', number: Int  = 2): String {
