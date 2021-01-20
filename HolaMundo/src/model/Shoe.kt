@@ -1,6 +1,13 @@
 package model
 
-class Shoe {
+class Shoe(val sku: Int, var mark: String) {
+
+    init {
+        println("SKU ID: $sku")
+        println("MARK: $mark")
+    }
+
+    // Atributos
     var size: Int = 34
         set(value) {
             if (value >= 34)

@@ -842,3 +842,67 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   ````
 
   **🛈 Nota:** si bien es posible definir Data Class dentro de otra Clase, estás sólo "vivirán temporalmente" y sólo podrán ser accedidas por la Clase que las contiene. Lo ideal es aferrarse al principio de modularidad y definir las Data Class en un archivo aparte.
+
+- ### Clase 34. Método Constructor
+
+  En Kotlin hay 2 tipos de constructores:
+
+  - #### Constructor primario
+
+    Es la forma clásica de inicializar una Clase
+
+    ````kotlin
+    class Shoe(val sku: Int, var mark: String) {
+    	// Implementación   
+    }
+    ````
+
+    
+
+  - #### Constructor secundario
+
+    Se define con el prefijo ``constructor``. 
+
+    ````kotlin
+    class Person {
+        var children: MutableList<Person> = mutableListOf()
+        constructor(parent: Person) {
+            parent.children.add(this)
+        }
+    }
+    ````
+
+    
+
+    Si la Clase en cuestión ya tiene un constructor primario, cada constructor secundario debe delegar al constructor primario, ya sea directa o indirectamente a través de otro(s) constructor(es) secundario(s). La delegación a otro constructor de la misma clase se realiza mediante la palabra reservada ``this``:
+
+    ````kotlin
+    class Person(val name: String) {
+        var children: MutableList<Person> = mutableListOf()
+        constructor(name: String, parent: Person) : this(name) {
+            parent.children.add(this)
+        }
+    }
+    ````
+
+    
+
+  En Kotlin además también se cuenta con otro elemento:
+
+  - #### Bloque de Inicialización (initializer blocks)
+
+    Alberga el código de inicialización. Se ejecuta cuando se construya la Clase y permite definir el código que se quiere ejecutar cuando se cree la Clase.
+
+    ````kotlin
+    init {
+        
+    }
+    ````
+
+    
+
+    
+
+    
+
+   
