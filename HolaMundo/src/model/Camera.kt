@@ -4,6 +4,8 @@ class Camera {
     // Atributos
     private var isOn: Boolean = false
     private var resolution: Int = 640
+    private var isSelfieMode: Boolean = false
+    private var isFlash: Boolean = false
 
     // Métodos
     fun turnOn() {
@@ -29,5 +31,21 @@ class Camera {
 
     fun getResolution(): Int {
         return this.resolution
+    }
+
+    fun getSelfieModeStatus(): String {
+        return if (this.isSelfieMode) "Selfie Mode: On" else "Selfie Mode: Off"
+    }
+
+    fun setSelfieModeStatus(status: Boolean) {
+        this.isSelfieMode = status
+    }
+
+    fun getFlashStatus(): String {
+        return if (isFlash) "Flash: On" else "Flash: Off"
+    }
+
+    fun setFlashStatus(status: Boolean) {
+        this.isFlash = status
     }
 }
