@@ -1,3 +1,5 @@
+import model.Camera
+
 const val N = "Name"
 
 fun main(args: Array<String>) {
@@ -203,6 +205,12 @@ fun main(args: Array<String>) {
     }
 
     calculateNumber(6)
+
+    // Clases
+    println("\nClases")
+    val camera = Camera()
+    camera.turnOn()
+    println("La cámara esta: ${ camera.isOn }")
 }
 
 fun evaluate(character: Char = '=', number: Int  = 2): String {

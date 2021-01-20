@@ -761,5 +761,22 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
   En Kotlin las Clases se definen con la palabra reservada ``class``.
 
+- ### Clase 29. Ejercicio de  Clases
+
+  ````kotlin
+  class Camera // Esta es la forma mínima de definir una Clase en Kotlin
+  ````
+
+  #### Instanciar una Clase en Kotlin
+
+  ````kotlin
+  val camera = Camera() // Crear un objeto
+  
+  camera.turnOn() // Ejecutar métodos
+  println(camera.isOn) // Acceder a atributos
+  ````
+
+  **🛈 Nota:** ningún atributo debería poder ser modificado directamente fuera de la Clase, esto es una mala práctica
+
 
 
