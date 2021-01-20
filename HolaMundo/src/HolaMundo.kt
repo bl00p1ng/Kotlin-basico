@@ -1,4 +1,5 @@
 import model.Camera
+import model.Movie
 import model.Shoe
 
 const val N = "Name"
@@ -226,6 +227,14 @@ fun main(args: Array<String>) {
 
     shoe.model = "Tennis"
     println(shoe.model)
+
+    // Data Class
+    println("\nData Class")
+    val movie = Movie("Ready Player One", "Steven Spielberg", 140)
+    println("🎥 Movie")
+    println(movie.title)
+    println(movie.creator)
+    println("${movie.duration} mins")
 }
 
 fun evaluate(character: Char = '=', number: Int  = 2): String {

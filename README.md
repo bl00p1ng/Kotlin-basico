@@ -828,3 +828,17 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
     ````
 
     **🛈 Nota:** este tipo de sintaxis se usan mucho Clases para datos, cómo por ejemplo Clases que alberguen datos traídos de una API (*Data Class*. - Clases de Datos) para así efectuar una serie de validaciones para verificar que los datos estén íntegros.
+
+- ### Clase 33. Data class en Kotlin
+
+  Los **Data Class** son tipos de Clases que permiten manejar datos, dichos datos pueden provenir de una fuente que no sea el código fuente del programa, como por ejemplo una API, una base de datos, etc. Los Data Class se usan para mapear esa fuente de datos y así manejar la consistencia de los atributos de esos datos.
+
+  #### Declarar un Data Class
+
+  ````kotlin
+  data class Movie(val title: String, val creator: String, val duration: Int) // Atributos mínmos para crear la Clase {
+  	// Implementación
+  }
+  ````
+
+  **🛈 Nota:** si bien es posible definir Data Class dentro de otra Clase, estás sólo "vivirán temporalmente" y sólo podrán ser accedidas por la Clase que las contiene. Lo ideal es aferrarse al principio de modularidad y definir las Data Class en un archivo aparte.
