@@ -964,8 +964,26 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
         return super.toString() + "SKU ID: $sku\nBRAND: $brand\nMODEL: $model\nCOLOR: $color\nSIZE: $size"
     }
     ````
-    
-    
+  
+- ### Clase 37. Clases abstractas
+
+  Son Clases que **no tienen implementación**. No se pueden crear instancias de este tipo de Clases.
+
+  Las Clases Abstractas se define con el prefijo ``abstract``.
+
+  ````kotlin
+  abstract class Product
+  ````
+
+  Este tipo de Clases pueden contener **métodos abstractos**, que son métodos que no tienen cuerpo y que tienen que implementarse obligatoriamente en las subclases, y también pueden contener métodos normales cuya implementación es opcional.
+
+  **Ejemplo de método abstracto:**
+
+  ````kotlin
+  abstract fun create(): String
+  ````
+
+  
 
 
 
