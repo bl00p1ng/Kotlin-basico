@@ -895,14 +895,32 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
     ````kotlin
     init {
-        
+    	// Implementación    
     }
     ````
 
-    
+- ### Clase 35. Herencia y polimorfismo
 
-    
+  **Todas** las Clases de Kotlin heredan de la Clase ``Any``.
 
-    
+  #### Definir herencia en Kotlin
 
-   
+  ````kotlin
+  class Subclase : Superclase {
+      // Implementación
+  }
+  ````
+
+  #### Polimorfismo en Kotlin
+  
+  ````kotlin
+  override fun toString(): String {
+  	return "SKU ID: $SKU\nMARK: $mark\nMODEL: $model\nCOLOR: $color\nSIZE: $size
+  }
+  ````
+
+
+
+
+
+ 

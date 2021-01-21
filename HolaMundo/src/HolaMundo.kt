@@ -236,6 +236,10 @@ fun main(args: Array<String>) {
     println(movie.title)
     println(movie.creator)
     println("${movie.duration} mins")
+
+    // Herencia y Polimorfismo
+    println("\nHerencia y Polimorfismo")
+    println("$shoe")
 }
 
 fun evaluate(character: Char = '=', number: Int  = 2): String {

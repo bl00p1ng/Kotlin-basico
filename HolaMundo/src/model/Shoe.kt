@@ -1,6 +1,10 @@
 package model
 
-class Shoe(val sku: Int, var mark: String) {
+class Shoe(val sku: Int, var mark: String) : Any() {
+
+    override fun toString(): String {
+        return "SKU ID: $sku\nMARK: $mark\nMODEL: $model\nCOLOR: $color\nSIZE: $size"
+    }
 
     init {
         println("SKU ID: $sku")
