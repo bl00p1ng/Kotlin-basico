@@ -1,6 +1,6 @@
 package model
 
-class Shoe(sku: Int, var brand: String, name: String, description: String): Product(name, description, sku) {
+class Shoe(sku: Int, var brand: String, name: String, description: String): Product(name, description, sku), ICrudActions {
     override fun create(): String {
         return "Create shoe"
     }

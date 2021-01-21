@@ -983,7 +983,23 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   abstract fun create(): String
   ````
 
-  
+- ### Clase 38. Interfaces
+
+  - Las **interfaces** se centran en las acciones/métodos que se repiten entre clases. Los métodos que se definen en una interfaz pueden implementarse en cualquier Clase independientemente de su familia o jerarquía.
+
+  - Por lo general se nombran con una ``I`` como prefijo o ``able`` como sufijo.
+
+    Las **Clases Abstractas** por el contrario se centran en los atributos/propiedades redundantes entre Clases. Se heredan de forma lineal al igual que cualquier otra Clase.
+
+  #### Implementar una Interfaz
+
+  ````kotlin
+  class Shoe(sku: Int, var brand: String, name: String, description: String): Product(name, description, sku), ICrudActions {
+      // Implementación
+  }
+  ````
+
+  **🛈 Nota:** una Clase puede implementar tantas interfaces como sea posible. Además las Interfaces también pueden albergar métodos con implementación y no sólo métodos sin cuerpo.
 
 
 
