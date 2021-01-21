@@ -221,7 +221,7 @@ fun main(args: Array<String>) {
 
     // Getters y Setters propios de Kotlin
     println("\nGetters y Setters propios de Kotlin")
-    val shoe = Shoe(235, "Praga")
+    val shoe = Shoe(2345, "Praga", "Shoe", "Blue Shoes")
     /*shoe.size = 33
     println(shoe.size)
     println(shoe.mark)

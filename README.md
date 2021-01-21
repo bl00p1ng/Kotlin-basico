@@ -919,7 +919,53 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   }
   ````
 
+- ### Clase 36. Aplicando herencia y polimorfismo
 
+  En Kotlin por defecto no se puede heredar una Clase. Esto se debe a que por defecto las Clases en Kotlin están **cerradas**. Para "abrir" una Clase se usa la siguiente sintaxis:
+
+  ````kotlin
+  open class Product
+  ````
+
+  #### Aplicando herencia
+
+  - ##### Superclase
+
+    ````kotlin
+    open class Product(var name: String, var description: String, var sku: Int) {
+    	// Implementación
+    }
+    ````
+
+  - ##### Subclase
+
+    ````kotlin
+    class Shoe(sku: Int, var mark: String, name: String, description: String): Product(name, description, sku) {
+        // Implementación
+    }
+    ````
+
+    Como el constructor de la superclase tiene parámetros definidos es necesario pasar también dichos parámetros al aplicar al herencia, sólo que en este caso no llevaran tipo de dato ni la palabra  reservada para declarar variables: ``: Product(name, description, sku)``.
+
+    Además también es necesario indicar dichos parámetros en el constructor de la subclase, en este caso si se declararán como variables y llevarán su respectivo tipo de dato en caso de ser necesario: ``class Shoe(sku: Int, var mark: String, name: String, description: String):``
+
+    **🛈 Nota:** en Kotlin los métodos de una clase también están cerrados por defecto, por lo que si se quiere sobrescribir un método hay que poner el prefijo ``open`` en su definición para hacerlo "abierto" y poder sobrescribirlo.
+    
+    ````kotlin
+    open fun create(): String {
+        // Implementación
+    }
+    ````
+    
+    Para acceder a métodos/atributos de la super clase se usa la palabra reservada ``super``.
+    
+    ````kotlin
+    override fun toString(): String {
+        return super.toString() + "SKU ID: $sku\nBRAND: $brand\nMODEL: $model\nCOLOR: $color\nSIZE: $size"
+    }
+    ````
+    
+    
 
 
 
