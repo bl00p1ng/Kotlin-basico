@@ -1001,6 +1001,38 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
 
   **🛈 Nota:** una Clase puede implementar tantas interfaces como sea posible. Además las Interfaces también pueden albergar métodos con implementación y no sólo métodos sin cuerpo.
 
+## 📚 Módulo 5. Programación Funcional
 
+- ### Clase 40. Funciones de orden superior
+
+  Son funciones que **reciben como parámetro otras funciones.** 
+
+  #### Declarar funciones de orden superior
+
+  ````kotlin
+  fun foo(var1, function): String { // var1 → Datos para la función que se pasa cómo parámetro. function → Función que se pasa como parámetro.
+      return function(var1)
+  }
+  ````
+
+  Algunas funciones de orden superior pueden no contener datos para su ejecución (``var1`` en el ejemplo anterior).
+
+  También es común que las funciones de orden superior reciban una Lambda por parámetro.
+
+  ````kotlin
+  fun foo(var1, {... -> ...}): String {
+  	return ...    
+  }
+  ````
+
+  El objetivo de las funciones de orden superior que pueda reutilizar la estructura que se le define muchas veces
+
+  #### Llamar a una función de orden superior.
+
+  ````kotlin
+  foo(3, "hola", ::function) // 3, "hola" → Datos para la función que se pasa cómo parámetro. function → Función que se pasa como parámetro.
+  ````
+
+  
 
  
