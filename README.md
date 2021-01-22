@@ -1033,6 +1033,50 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   foo(3, "hola", ::function) // 3, "hola" → Datos para la función que se pasa cómo parámetro. function → Función que se pasa como parámetro.
   ````
 
-  
+- ### Clase 41. Una función como parámetro
 
- 
+  **Ejemplo de una función de orden superior:**
+
+  Para empezar se declara la función de orden superior.
+
+  ````kotlin
+  fun calculator(a: Int, b: Int, c: Int, operation: (Int, Int, Int) -> Int): Int {
+      return operation (a, b, c)
+  }
+  ````
+
+  Se indican los parámetros (``a: Int, b: Int, c: Int``) que va a recibir la función ``operation``, esta es a su vez una función lo más genérica posible para que sea posible reutilizar su estructura. Es por eso que sólo se define que va a recibir 3 parámetros de tipo entero y va a retornar un número entero. Después se define el tipo de dato que va retornar la función  de orden superior y finalmente en el cuerpo de la función se retorna la función ``operation`` con sus respectivos parámetros.
+
+  La estructura que se definió en la  función de orden superior puede ser reutilizada tantas veces como sea necesario en otras funciones:
+
+  ````kotlin
+  fun sum(a: Int, b: Int, c: Int) = a + b + c
+  fun subtract(a: Int, b: Int, c: Int) = a - b - c
+  fun multiply(a: Int, b: Int, c: Int) = a * b * c
+  ````
+
+  Las 3 funciones pueden reutilizar la función de orden superior puesto que se apegan a su estructura; reciben por parámetros 3 números enteros y retornar a su vez un número entero.
+
+  ````kotlin
+  calculator(1, 2, 3, ::multiply)
+  ````
+
+  Por último se llama a la función de orden superior, a la que gracias a su estructura genérica se le puede pasar cualquiera de las 3 funciones creadas anteriormente.
+
+   Un ejemplo en el que se ve mucho el uso de funciones de orden superior es el desarrollo de apps Android, por ejemplo en el siguiente código:
+
+  ````kotlin
+  view.setOnClickListener({ view -> 
+  	// Implementación
+  })
+  ````
+
+  Otra lugar en el que se pueden ver las funciones de orden superior son los Callbacks:
+
+  ````kotlin
+  fun someRequest(callback: (Data, Int) -> Unit) {
+      // Implementación
+  }
+  ````
+
+  

@@ -240,7 +240,22 @@ fun main(args: Array<String>) {
     // Herencia y Polimorfismo
     println("\nHerencia y Polimorfismo")
     println("$shoe")
+
+    // Funciones de Orden Superior
+    println("\nFunciones de Orden Superior")
+    val resultado: Int = calculator(1, 2, 3, ::multiply)
+    println("La calculadora opero una multiplicación: $resultado")
+    println(" La resta fue ${calculator(2, 3, 4, ::subtract)}")
+    println(" La suma fue ${calculator(2, 3, 4, ::sum)}")
 }
+
+fun calculator(a: Int, b: Int, c: Int, operation: (Int, Int, Int) -> Int): Int {
+    return operation (a, b, c)
+}
+
+fun sum(a: Int, b: Int, c: Int) = a + b + c
+fun subtract(a: Int, b: Int, c: Int) = a - b - c
+fun multiply(a: Int, b: Int, c: Int) = a * b * c
 
 fun evaluate(character: Char = '=', number: Int  = 2): String {
     return "$number es $character"
