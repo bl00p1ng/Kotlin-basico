@@ -1079,4 +1079,31 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   }
   ````
 
+- ### Clase 42. Recursividad. List
+
+  Se pueden crear listas que contengan elementos de un mismo tipo de dato:
+
+  ````kotlin
+  val numbersInt = listOf(4,3,2)
+  ````
+
+  Pero también se pueden crear listas que almacenen elementos con diferentes tipos de datos, en este caso el tipo de dato de la lista será ``Any``.
+
+  ````kotlin
+   val mylist = listOf(4,"lala","ll",2)
+  ````
+
+  También se pueden pueden crear estructuras de clave-valor utilizando listas tipo *hashMapOf*.
+
+  ````kotlin
+  val months = hashMapOf(1 to "Enero", 2 to "Febrero", 3 to "Marzo", 4 to "Abril", 5 to "Mayo", 6 to "Junio", 7 to "Julio", 8 to "Agosto", 9 to "Septiembre" , 10 to "Octubre", 11 to "Noviembre" ,  12 to "Diciembre" )
+  ````
+
+  Para recorrer el HashMap:
+
+  ````kotlin
+  for (key in months.keys)
+  	println("key:$key  value:${months[key]}")
+  ````
+
   
