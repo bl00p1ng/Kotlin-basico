@@ -1106,4 +1106,20 @@ Apuntes y archivos del [Curso Básico de Kotlin de Platzi](https://platzi.com/cl
   	println("key:$key  value:${months[key]}")
   ````
 
+- ### Clase 43. Recursividad. Filter
+
+  Esta función sirve para filtrar los datos que cumplan con determinada condición en una lista. Además es un claro ejemplo de como se usan las funciones de orden  superior, recibe como parámetro un Lambda en la que se puede poner el auxiliar ``it`` para poner las acciones únicamente sin necesidad de expresar los parámetros. ``filter`` puede recibir una comparación lógica o un método.
+
+  ````kotlin
+  val numbersInt = listOf(4,3,2)
+  numbersInt.filter { it % 2 == 0 }  
+  
+  // Este será el resultado: [4,2]
+  
+  val words = listOf("Oasis","Hola", "Holanda", "Objeto")
+  words.filter { it.startsWith('O') }
+  
+  // Este será el resultado: [Oasis, Objeto]
+  ````
+
   
